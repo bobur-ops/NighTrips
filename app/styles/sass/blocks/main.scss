@@ -1,0 +1,803 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+  color: #fff;
+}
+body {
+  background: #011627;
+  position: relative;
+  // overflow: hidden;
+}
+
+.bg-lights {
+  margin: 0 auto;
+  z-index: -5;
+  position: absolute;
+  top: 1313px;
+  filter: blur(20px);
+  // right: 50%;
+  // transform: translateX(50%);
+  width: 100%;
+  background-image: url(../images/dist/BGLIGHTS.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 2963px;
+}
+
+.bg-img {
+  z-index: -2;
+  background-image: url(../images/dist/bgimg.png);
+  position: absolute;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 2982px;
+  top: 2420px;
+}
+.container {
+  max-width: 1679px;
+  margin: 0 auto;
+}
+.header {
+  padding-bottom: 327px;
+  position: relative;
+  background-image: url(../images/dist/topBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  padding-top: 75px;
+  &Gradient {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(1, 22, 39, 0) 0%,
+      #011627 76.64%,
+      #011627 100%
+    );
+    width: 100%;
+    height: 377px;
+  }
+  &-top {
+    display: flex;
+    margin-bottom: 156px;
+    &__logo {
+      margin-right: auto;
+      font-family: "Playfair Display";
+      font-size: 36px;
+      font-weight: bold;
+      span {
+        color: #41ead4;
+      }
+    }
+    &__rightItems {
+      display: flex;
+      align-items: center;
+      .searchBtn {
+        margin-right: 32px;
+      }
+      .menuBtn {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          right: -14px;
+          width: 30px;
+          height: 2px;
+          top: 50%;
+          transform: translateY(-50%);
+          background: #fff;
+          border-radius: 16px;
+        }
+        button {
+          background: #00c9e0;
+          box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+          border-radius: 48px;
+          padding: 20px 58px;
+          border: none;
+          outline: none;
+          text-transform: uppercase;
+          font-family: "Larsseit";
+          font-weight: bold;
+          font-size: 16px;
+          letter-spacing: 0.1em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &-content {
+    margin-bottom: 192px;
+    &__lgTitle {
+      font-family: "Playfair Display";
+      font-size: 120px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    &__mdTitle {
+      font-weight: bold;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-family: "Larsseit";
+      text-align: center;
+    }
+    &__text {
+      font-family: "Larsseit";
+      max-width: 650px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 25px;
+    }
+  }
+  &-bottom {
+    display: flex;
+    &__leftItems {
+      margin-right: auto;
+      p {
+        font-family: "Larsseit";
+        letter-spacing: 0.05em;
+        opacity: 0.9;
+        transform: rotate(-90deg);
+        font-weight: bold;
+        font-size: 15px;
+        text-transform: uppercase;
+        position: relative;
+        &::after {
+          content: "";
+          top: 9.5px;
+          left: -95px;
+          position: absolute;
+          height: 2px;
+          width: 80px;
+          background: linear-gradient(180deg, #09f4f4 0%, #00c9e0 100%);
+          border-radius: 13px;
+        }
+      }
+    }
+    &__socials {
+      .item {
+        display: block;
+        margin-bottom: 23.7px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.pick {
+  margin-bottom: 300px;
+  &-wrapper {
+    padding: 0 244px;
+  }
+  &-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 83px;
+    &__title {
+      font-family: "PLayfair Display";
+      font-weight: bold;
+      font-size: 72px;
+      letter-spacing: -0.02em;
+      margin-right: 33px;
+    }
+    &__closeBtn {
+      margin-right: 33px;
+      transform: translateY(10px);
+    }
+    &__text {
+      font-family: "Larsseit";
+      letter-spacing: -0.02em;
+      line-height: 24px;
+      max-width: 350px;
+      transform: translateY(10px);
+    }
+  }
+  &-selectBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 2px rgba(#41ead4, 0.3);
+    margin-bottom: 150px;
+    &__btn {
+      background: transparent;
+      padding: 0 86.5px 37px;
+      font-family: "Larsseit";
+      font-weight: bold;
+      font-size: 19px;
+      letter-spacing: -0.02em;
+      opacity: 0.5;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: 1s ease-in-out;
+    }
+  }
+  .active-1 {
+    #pickbtn1 {
+      opacity: 1;
+      border-bottom: 4px solid  #41ead4;
+      color: #41ead4;
+    }
+  }
+  .active-2 {
+    #pickbtn2 {
+      opacity: 1;
+      border-bottom: 4px solid  #41ead4;
+    }
+  }
+  .active-3 {
+    #pickbtn3 {
+      opacity: 1;
+      border-bottom: 4px solid  #41ead4;
+    }
+  }
+  .active-4 {
+    #pickbtn4 {
+      opacity: 1;
+      border-bottom: 4px solid  #41ead4;
+    }
+  }
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .active {
+    transform: scale(1);
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  &-content {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    opacity: 0;
+    transition: 1s;
+    &:nth-child(2) {
+      margin-top: -607px;
+    }
+    &:nth-child(3) {
+      margin-top: -607px;
+    }
+    &:nth-child(4) {
+      margin-top: -607px;
+    }
+    .dots {
+      position: absolute;
+      bottom: -55px;
+      left: -55px;
+    }
+    &__slider {
+      margin-right: auto;
+      .slider-container {
+        max-width: 486px;
+        .slider-img, .slider-img2, .slider-img3, .slider-img4 {
+          position: relative;
+          overflow: hidden;
+          &__bg {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            width: 486px;
+            height: 607px;
+            border-radius: 11px;
+          }
+          &__navigation {
+            background: #133149;
+            z-index: 3;
+            position: absolute;
+            transform: scaleX(-1);
+            display: flex;
+            justify-content: center;
+            bottom: 42px;
+            right: 56px;
+            .line {
+              width: 2px;
+              background: #133149;
+              height: 65px;
+              position: absolute;
+              top: 0;
+              right: 50%;
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+              order: 1;
+              width: 65px;
+              height: 65px;
+              background: #011627;
+              box-shadow: -10px 14px 24px rgba(1, 22, 39, 0.08);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &::after {
+                content: none;
+                font-size: 0;
+              }
+            }
+            .swiper-button-prev {
+              border-radius: 0 0 0 20%;
+              transform: rotate(-180deg);
+            }
+            .swiper-button-disabled {
+              opacity: 0.75;
+            }
+            .swiper-button-next {
+              border-radius: 0 0 0 20%;
+              transform: translateX(18px);
+            }
+          }
+          &__decor,
+          &__decor2,
+          &__decor3,
+          &__decor4 {
+            display: flex;
+            max-width: 260px;
+            overflow: hidden;
+            flex-direction: column;
+            position: absolute;
+            top: 233px;
+            left: -95px;
+            z-index: 10;
+            .counter {
+              color: #41ead4;
+              letter-spacing: 0.15em;
+              font-weight: 800;
+              font-family: "Larsseit";
+              font-size: 24px;
+            }
+            .swiper-wrapper {
+              // overflow: hidden;
+              .name {
+                margin-right: 50px;
+                max-width: 210px;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                font-family: "Larsseit";
+                font-weight: bold;
+                font-size: 24px;
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &__info {
+      .title {
+        font-family: "Playfair Display";
+        font-size: 65px;
+        letter-spacing: -0.02em;
+        font-weight: bold;
+        margin-right: 34px;
+        width: 500px;
+      }
+      .text {
+        max-width: 490px;
+        font-family: "Larsseit";
+        letter-spacing: -0.02em;
+        font-size: 17px;
+        font-weight: bold;
+        margin-bottom: 40px;
+        &:last-child {
+          margin-bottom: 45px;
+        }
+      }
+      .btn {
+        button {
+          background: #00c9e0;
+          box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+          border-radius: 183px;
+          padding: 19px 47px;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          font-size: 14px;
+          font-family: "Larsseit";
+          font-weight: bold;
+          border: none;
+          position: relative;
+          outline: none;
+          &::after {
+            content: "";
+            position: absolute;
+            right: -14px;
+            width: 30px;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            border-radius: 16px;
+          }
+        }
+      }
+    }
+    &__socials {
+      position: absolute;
+      right: -161px;
+      bottom: 0;
+      .share {
+        font-family: "Larsseit";
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      .items {
+        display: flex;
+        margin-bottom: -12px;
+        .item {
+          margin-right: 23px;
+          display: block;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  margin-top: 300px;
+  position: relative;
+  margin-bottom: 278px;
+  position: relative;
+  .dots {
+    position: absolute;
+    top: 165px;
+    right: -80px;
+  }
+  .container {
+    padding: 0 242px;
+    display: flex;
+    align-items: center;
+  }
+  &-info {
+    // margin-right: 88px;
+    &__lgTitle {
+      font-family: 'Playfair Display';
+      font-weight: bold;
+      font-size: 72px;
+      margin-bottom: 22px;
+      letter-spacing: -0.02em;
+
+    }
+    &__mdTitle {
+      font-family: 'Larsseit';
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 40px;
+      letter-spacing: -0.02em;
+      &:last-child {
+        margin-bottom: 38px;
+      }
+    }
+    &__text {
+      font-family: 'Larsseit';
+      font-weight: normal;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      line-height: 27px;
+      margin-bottom: 44px;
+      width: 317px;
+    }
+    &__btn {
+      button {
+        background: #00c9e0;
+        box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+        border-radius: 183px;
+        padding: 19px 47px;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 14px;
+        font-family: "Larsseit";
+        font-weight: bold;
+        border: none;
+        position: relative;
+        outline: none;
+        &::after {
+          content: "";
+          position: absolute;
+          right: -14px;
+          width: 30px;
+          height: 2px;
+          top: 50%;
+          transform: translateY(-50%);
+          background: #fff;
+          border-radius: 16px;
+        }
+      }
+    }
+  }
+  &-gallery {
+    display: flex;
+    max-width: 840px;
+    flex-wrap: wrap;
+    margin-left: 88px;
+    &__item {
+      position: relative;
+      &:hover {
+        &::after {
+          opacity: 0;
+        }
+        .about-gallery__name {
+          transform: scale(1);
+        }
+      }
+      &::after {
+        transition: 0.7s ease-in-out;
+        left: 0;
+        content: '';
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #000;
+        opacity: 0.6;
+        z-index: 5;
+      }
+    }
+    &__img {
+      overflow: hidden;
+      z-index: 2;
+      img {
+        width: 395px;
+        height: 406px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    &__name {
+      transform: scale(0);
+      z-index: 10;
+      transition: 0.7s ease-in-out;
+      top: 270px;
+      left: -50px;
+      background: #fff;
+      box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+      border-radius: 8px;
+      position: absolute;
+      padding: 26px 19px;
+      color: #333;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-family: 'Larsseit';
+      font-weight: bold;
+      span {
+        color: #00C9E0;
+      }
+    }
+  }
+}
+
+.testimonials {
+  z-index: 5;
+  // margin-bottom: 145px;
+  .container {
+    background-color: #011627;
+    border-radius: 8px;
+    padding: 100px 319px 137px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 2px;
+      height: 80px;
+      background: linear-gradient(180deg, #09F4F4 0%, #00C9E0 100%);
+      border-radius: 13px;
+      position: absolute;
+      left: 839px;
+      top: -40px;
+    }
+  }
+  &-titles {
+    margin-bottom: 73px;
+    &__lgTitle {
+      text-align: center;
+      font-size: 72px;
+      letter-spacing: -0.02em;
+      font-weight: bold;
+      font-family: 'Playfair Display';
+      margin-bottom: 31px;
+    }
+    &__mdTitle {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-family: 'Larsseit';
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .last {
+      max-width: 400px;
+    }
+  }
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 125px;
+    &__card {
+      background: #02223B;
+      box-shadow: 0px 20px 30px rgba(0, 201, 224, 0.03);
+      border-radius: 5px;
+      margin-bottom: 24px;
+      width: 540px;
+      height: 516px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15px;
+      .card-inner {
+        position: relative;
+        margin-right: 74px;
+        margin-top: 75px;
+        margin-left: 102px;
+        margin-bottom: 75px;
+        .decor {
+          position: absolute;
+          left: -50px;
+          top: 0;
+        }
+        &__boldText {
+          font-family: 'Larsseit';
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 34px;
+          margin-bottom: 31px;
+          max-width: 334px;
+        }
+        &__text {
+          font-family: 'Larsseit';
+          font-size: 18px;
+          margin-bottom: 33px;
+          line-height: 34px;
+          margin-bottom: 31px;
+          max-width: 334px;
+        }
+        &__bottom {
+          display: flex;
+          align-items: center;
+          .img {
+            background-blend-mode: multiply, normal;
+            background-image: url(../../../images/dist/testimonials/1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 12px;
+            border-radius: 4px;
+            width: 80px;
+            height: 80px;
+          }
+          .lead {
+            font-family: 'Larsseit';
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            line-height: 20px;
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  margin-bottom: 150px;
+  .container {
+    position: relative;
+    padding-top: 140px;
+    &::after {
+      content: '';
+      background: linear-gradient(180deg, #09F4F4 0%, #00C9E0 100%);
+      border-radius: 13px;
+      width: 2px;
+      height: 80px;
+      left: 839px;
+      top: -40px;
+      position: absolute;
+    }
+  }
+  &-content {
+    margin: 0 auto ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__columns {
+      display: flex;
+      margin-bottom: 69px;
+      margin-right: auto;
+      margin-left: auto;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .column {
+        margin-right: 125px;
+        &__title {
+          font-family: 'Larsseit';
+          font-weight: bold;
+          margin-bottom: 19px;
+          font-size: 18px;
+          text-transform: uppercase;
+
+        }
+        &__divider {
+          margin-bottom: 19px;
+        }
+        .link {
+          margin-bottom: 20px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          a {
+            font-family: 'Larsseit';
+            font-size: 15px;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+      .socials {
+        &-items {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    &__copyright {
+      text-align: center;
+      font-family: 'Larsseit';
+      font-size: 15px;
+      margin-bottom: 26px;
+    }
+    &__logo {
+      font-family: 'PLayfair Display';
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      span {
+        color: #00C9E0;
+      }
+    }
+  }
+}
+
+
+// Media Query Mixins
+
+@mixin laptopL {
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
