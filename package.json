@@ -3,7 +3,7 @@
 	"version": "5.0.0",
 	"description": "OptimizedHTML 5 - Lightweight Gulp Starter",
 	"main": "index.js",
-	"homepage": "https://bobur-ops.guthub.io/NT",
+	"homepage": "https://bobur-ops.guthub.io/NightTrips",
 	"author": "WebDesign Master",
 	"type": "module",
 	"browserslist": [
@@ -46,6 +46,7 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
+		"gh-pages": "^3.2.3",
 		"gsap": "^3.7.1",
 		"swiper": "^7.0.6"
 	}
