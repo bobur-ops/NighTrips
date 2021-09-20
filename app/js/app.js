@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	swiperImg4.on('slideChange', function() {
 		let ind = swiperText4.realIndex + 1
 		console.log(ind)
-		gsap.to(curnum3, .2, {
+		gsap.to(curnum4, .2, {
 			force3D: true,
 			y: -10,
 			opacity: 0,

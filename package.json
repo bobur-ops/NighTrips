@@ -3,7 +3,7 @@
 	"version": "5.0.0",
 	"description": "OptimizedHTML 5 - Lightweight Gulp Starter",
 	"main": "index.js",
-	"homepage": "https://bobur-ops.guthub.io/NightTrips",
+	"homepage": "https://bobur-ops.guthub.io/NighTrips",
 	"author": "WebDesign Master",
 	"type": "module",
 	"browserslist": [
